@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 11:27:35 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/11/06 00:50:35 by kkouaz           ###   ########.fr       */
+/*   Created: 2023/11/04 18:30:02 by kkouaz            #+#    #+#             */
+/*   Updated: 2023/11/06 00:29:32 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-    private :
+   protected :
         std :: string Name;
         unsigned int HitPoints;
         unsigned int EnergyPoints;
