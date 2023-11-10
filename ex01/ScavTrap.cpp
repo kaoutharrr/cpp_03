@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:25:38 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/11/06 04:43:52 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/11/09 13:54:12 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,9 @@ ScavTrap :: ScavTrap(const std :: string& N) : ClapTrap(N)
     EnergyPoints = 50;
     attackDamage  = 20;
     std :: cout << "Parametrized constructor of scavtrap called\n";
-    
 }
 
-ScavTrap :: ScavTrap( ScavTrap& other) : ClapTrap(other)
+ScavTrap :: ScavTrap( ScavTrap& other) :  ClapTrap(other)
 {
     std :: cout << "Copy constructor of scavtrap called\n";
     *this = other;
@@ -57,9 +56,9 @@ void ScavTrap :: guardGate()
 
 void  ScavTrap :: attack(const std::string& target)
 {
-    if(!EnergyPoints)
+    if(!HitPoints || !EnergyPoints)
     {
-        std :: cout << "no energy points left \n";
+        std :: cout << "no points left \n";
         return;
     }
     EnergyPoints--;

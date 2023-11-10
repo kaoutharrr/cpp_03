@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:27:35 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/11/06 00:50:35 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/11/07 01:13:18 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ class ClapTrap
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
         ~ClapTrap();
-
-
 };
 
 

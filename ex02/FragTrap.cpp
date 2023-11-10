@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 21:59:42 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/11/06 00:53:05 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/11/09 13:25:30 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ FragTrap :: FragTrap(std :: string N) : ClapTrap(N)
     
 }
 
-FragTrap :: FragTrap(FragTrap& other): ClapTrap(other)
+FragTrap :: FragTrap(FragTrap& other) : ClapTrap(other)
 {
     std :: cout << "Copy constructor of FragTrap";
     *this = other;

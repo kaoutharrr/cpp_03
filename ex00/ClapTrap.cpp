@@ -6,7 +6,7 @@
 /*   By: kkouaz <kkouaz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:39:17 by kkouaz            #+#    #+#             */
-/*   Updated: 2023/11/06 04:29:37 by kkouaz           ###   ########.fr       */
+/*   Updated: 2023/11/07 07:04:46 by kkouaz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ ClapTrap :: ClapTrap(const std :: string& N)
 
 ClapTrap :: ClapTrap(ClapTrap& copy)
 {
-    std :: cout << "Copy coonstructor of clapTrap called\n";
+    std :: cout << "Copy constructor of clapTrap called\n";
     *this = copy;
 }
 
@@ -50,21 +50,21 @@ ClapTrap& ClapTrap :: operator=(const ClapTrap& other)
 
 void  ClapTrap :: attack(const std::string& target)
 {
-    if(!EnergyPoints)
+    if(!EnergyPoints || !HitPoints)
     {
-        std :: cout << "no energy points left \n";
+        std :: cout << "no points left \n";
         return;
     }
     EnergyPoints--;
-    std :: cout << "ClapTrap "  << Name << " attacks " <<target << " causing ";
+    std :: cout << "ClapTrap "  << Name << " attacks " << target << " causing ";
     std :: cout  << attackDamage<< " points of damage!\n";
 }
 
 void ClapTrap :: takeDamage(unsigned int amount)
 {
-    if(!HitPoints)
+    if(!HitPoints || !EnergyPoints)
     {
-        std :: cout << "no hitpoints left \n";
+        std :: cout << "no points left \n";
         return;
     }
     if(HitPoints < amount)
@@ -77,18 +77,18 @@ void ClapTrap :: takeDamage(unsigned int amount)
 
 void ClapTrap :: beRepaired(unsigned int amount)
 {
-    if(!EnergyPoints)
+    if(!EnergyPoints || !HitPoints)
     {
-        std :: cout << "no energy points left \n";
+        std :: cout << "no points left \n";
         return;
     }
     EnergyPoints--;
-    HitPoints+= amount;
+    HitPoints += amount;
     std :: cout << "ClapTrap  gets " << amount ;
     std :: cout << " of points and repairs itself "<< std :: endl;
 }
 
 ClapTrap :: ~ClapTrap(void)
 {
-    std :: cout << "destructor of claptrap Called \n";
+    std :: cout << "destructor of Claptrap Called \n";
 }
